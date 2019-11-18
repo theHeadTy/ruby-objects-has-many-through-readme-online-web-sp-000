@@ -19,7 +19,4 @@ class Waiter
     Meal.all.select { |meal| meal.waiter == self }
   end
 
-  def best_tipper
-    Meal.all.sort_by { |meal| meal.tip.sort! }
-  end
 end
