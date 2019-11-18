@@ -11,8 +11,10 @@ class Waiter
     @@all
   end
   
+  initialize(waiter, customer, total, tip)
   def new_meal(customer, total, tip)
-    Meal.new()
+    Meal.new(self, customer, total, tip)
+  end
 
   def meals
     Meal.all.select { |meal| meal.waiter == self }
