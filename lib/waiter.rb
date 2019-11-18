@@ -16,6 +16,6 @@ class Waiter
   end
 
   def best_tipper
-    return Meal.all.sort_by { |meal| meal.tip }.last
+    Meal.all.sort_by { |meal| meal.tip }
   end
 end
