@@ -20,6 +20,6 @@ class Waiter
   end
 
   def best_tipper
-    Meal.all.sort_by { |meal| meal.tip }
+    Meal.all.sort_by { |meal| meal.tip }.first
   end
 end
