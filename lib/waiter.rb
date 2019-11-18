@@ -20,7 +20,10 @@ class Waiter
   end
   
   def best_tipper
-    Meal.all.max_by { |meal| meal.customer if meal.tip }
+    tip = Meal.all.max_by { |meal| meal.tip }
+    
+    tip.customer
+    
   end
 
 end
